@@ -1,20 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StatusBar } from 'react-native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Splash from './Splash';
+import Login from './login';
+import Home from './home';
+import Botao from './botao';
+
+const Stack = createNativeStackNavigator();
+
+// Tema personalizado escuro para o NavigationContainer
+const temaEscuro = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: '#0a0a0a',
+    card: '#141414',
+    text: '#ffffff',
+    border: '#333333',
+    primary: '#ff1a1a',
+  },
+};
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      {/* Barra de status escura combinando com o tema */}
+      <StatusBar barStyle="light-content" backgroundColor="#0a0a0a" />
+      
+      <NavigationContainer theme={temaEscuro}>
+        <Stack.Navigator
+          initialRouteName="Splash"
+          screenOptions={{ 
+            headerShown: false,
+            contentStyle: { backgroundColor: '#0a0a0a' }, // Fundo preto em todas as telas
+            animation: 'fade', // Transição suave entre as telas
+          }}
+        >
+          <Stack.Screen name="Splash" component={Splash} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Botao" component={Botao} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
