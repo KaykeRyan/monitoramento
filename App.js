@@ -7,6 +7,10 @@ import Splash from './Splash';
 import Login from './login';
 import Home from './home';
 import Botao from './botao';
+import Usuarios from './Usuarios';
+import UsuarioDetalhe from './UsuarioDetalhe';
+import Salas from './Salas';
+import SalaDetalhe from './SalaDetalhe';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +46,10 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Botao" component={Botao} />
+          <Stack.Screen name="Usuarios" component={Usuarios} />
+          <Stack.Screen name="UsuarioDetalhe" component={UsuarioDetalhe} />
+          <Stack.Screen name="Salas" component={Salas} />
+          <Stack.Screen name="SalaDetalhe" component={SalaDetalhe} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

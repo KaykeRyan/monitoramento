@@ -17,6 +17,22 @@ export default function Home({ navigation }) {
         <Text style={styles.textoBotao}>Ir para a página do Botão</Text>
       </TouchableOpacity>
 
+            <TouchableOpacity
+        style={[styles.botao, { backgroundColor: '#333', marginTop: 16 }]}
+        onPress={() => navigation.navigate('Salas')}
+        activeOpacity={0.8}
+      >
+        <Text style={styles.textoBotao}>Minhas Salas</Text>
+      </TouchableOpacity>
+
+            <TouchableOpacity
+        style={[styles.botao, { backgroundColor: '#333', marginTop: 16 }]}
+        onPress={() => navigation.navigate('Usuarios')}
+        activeOpacity={0.8}
+      >
+        <Text style={styles.textoBotao}>Ver Usuários Cadastrados</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity
         style={[styles.botao, { backgroundColor: '#e60000', marginTop: 16 }]}
         onPress={() => navigation.navigate('Login')}
