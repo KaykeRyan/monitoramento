@@ -1,0 +1,18 @@
+› Building app...
+ 
+ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 
+ 
+Please set the JAVA_HOME variable in your environment to match the 
+location of your Java installation. 
+Error: C:\Users\47555982811\monitoramento\android\gradlew.bat app:assembleDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081 -PreactNativeArchitectures=x86_64 exited with non-zero code: 9009
+Error: C:\Users\47555982811\monitoramento\android\gradlew.bat app:assembleDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081 -PreactNativeArchitectures=x86_64 exited with non-zero code: 9009
+    at ChildProcess.completionListener (C:\Users\47555982811\monitoramento\node_modules\@expo\spawn-async\build\spawnAsync.js:113:23)
+    at Object.onceWrapper (node:events:623:26)
+    at ChildProcess.emit (node:events:508:28)
+    at cp.emit (C:\Users\47555982811\monitoramento\node_modules\cross-spawn\lib\enoent.js:34:29)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    ...
+    at spawnAsync (C:\Users\47555982811\monitoramento\node_modules\@expo\spawn-async\build\spawnAsync.js:9:23)
+    at spawnGradleAsync (C:\Users\47555982811\monitoramento\node_modules\expo\node_modules\@expo\cli\build\src\start\platforms\android\gradle.js:107:48)
+    at assembleAsync (C:\Users\47555982811\monitoramento\node_modules\expo\node_modules\@expo\cli\build\src\start\platforms\android\gradle.js:82:18)
+    at runAndroidAsync (C:\Users\47555982811\monitoramento\node_modules\expo\node_modules\@expo\cli\build\src\run\android\runAndroidAsync.js:85:41)
